@@ -11,6 +11,7 @@ COPY ./requirements.txt ./
 
 RUN apt-get update
 RUN apt-get -y upgrade
+RUN apt-get install -y git
 RUN conda update conda
 RUN conda install python=3.10
 RUN conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia
